@@ -1,0 +1,12 @@
+# 服务器配置
+server:
+  port: 9002
+
+spring:
+  # 数据库配置
+  datasource:
+    url: jdbc:oracle:thin:@127.0.0.1:1621:orcl
+    username: root
+    password: root
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
