@@ -1,8 +1,10 @@
 package com.capable.springboot;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.info.ProjectInfoProperties;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -10,7 +12,8 @@ import org.springframework.web.filter.CorsFilter;
 
 import java.util.logging.Logger;
 
-@SpringBootApplication
+@SpringBootApplication()
+@MapperScan("com.capable.springboot.mapper")
 public class SpringbootApplication {
 
     public static void main(String[] args) {

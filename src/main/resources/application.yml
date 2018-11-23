@@ -5,8 +5,16 @@ server:
 spring:
   # 数据库配置
   datasource:
-    url: jdbc:oracle:thin:@127.0.0.1:1621:orcl
+    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
     username: root
     password: root
     driver-class-name: oracle.jdbc.driver.OracleDriver
+
+
+mybatis:
+  mapper-locations: classpath*:mybatis/*.xml
+  type-aliases-package: com.capable.springboot.pojo.entity
+
+mapper:
+  mappers: com.capable.springboot.mapper.UserMapper
 
